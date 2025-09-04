@@ -1,6 +1,6 @@
 # 🕉️ Gita-Chatbot: *The Divine Guide*  
 
-A **hallucination-free** spiritual chatbot that brings the timeless wisdom of the *Bhagavad Gita* to life — running **completely on your local machine**.  
+A **free** spiritual chatbot that brings the timeless wisdom of the *Bhagavad Gita* to life — running **completely on your local machine**.  
 
 This project combines **Retrieval-Augmented Generation (RAG)** with a serene **Streamlit frontend**, ensuring responses are always **authentic, grounded, and compassionate**.  
 
