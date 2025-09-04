@@ -1,0 +1,19 @@
+# Core MVP
+sentence-transformers
+faiss-cpu
+numpy
+pandas
+tqdm
+
+# UI
+streamlit
+
+# Voice (optional)
+pyttsx3
+speechrecognition
+pydub
+
+# Utilities
+python-dotenv
+transformers
+torch
