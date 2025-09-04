@@ -1,6 +1,0 @@
-streamlit
-sentence-transformers
-faiss-cpu
-transformers
-torch
-pydantic # Good to keep as a dependency of other libraries
