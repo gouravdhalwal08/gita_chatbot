@@ -1,60 +1,104 @@
-🕉️ Gita-Chatbot: The Divine Guide (Local LLM Version)
-A beautiful, immersive, and "hallucination-free" chatbot that provides spiritual guidance from the Bhagavad Gita, running completely on your local machine.
+# 🕉️ Gita-Chatbot: *The Divine Guide*  
 
-This project leverages a powerful RAG (Retrieval-Augmented Generation) architecture to deliver accurate and context-aware answers. The AI brain is a local model from Hugging Face (google/flan-t5-base), ensuring no API keys or internet dependency is required for the core logic. The frontend is a visually stunning Streamlit application designed for a serene and divine user experience.
+A **hallucination-free** spiritual chatbot that brings the timeless wisdom of the *Bhagavad Gita* to life — running **completely on your local machine**.  
 
-✨ Key Features
-Divine User Interface: A beautiful, dark-themed UI with an animated cosmic background, custom fonts, and immersive design.
+This project combines **Retrieval-Augmented Generation (RAG)** with a serene **Streamlit frontend**, ensuring responses are always **authentic, grounded, and compassionate**.  
 
-Runs Locally: The entire AI logic runs on your computer. No API keys needed, no costs involved.
+---
 
-Streaming Responses: Answers from Krishna appear token-by-token, creating a dynamic and engaging "live" conversation.
+## ✨ Features  
 
-Grounded in Wisdom: Uses a strict RAG approach to ensure answers are based only on the provided Gita verses, preventing the AI from generating false information.
+- 🎨 **Divine User Interface** – Dark-themed, cosmic background, custom fonts, and immersive design.  
+- 💻 **Runs 100% Locally** – No API keys, no internet dependency, and no hidden costs.  
+- ⏳ **Streaming Responses** – Lord Krishna’s answers appear **token-by-token**, creating a “live” conversation.  
+- 📚 **Grounded in Wisdom** – All answers come directly from the *Bhagavad Gita’s 700 shlokas* using a strict RAG pipeline.  
+- 🌍 **Semantic Search** – Multi-lingual sentence-transformer + FAISS index for lightning-fast retrieval of the most relevant verses.  
 
-Semantic Search: Employs a multi-lingual sentence transformer and a FAISS vector index to find the most relevant shlokas for any user query.
+---
 
-⚙️ How It Works (RAG Architecture)
-The chatbot operates on a simple yet powerful two-step process:
+## ⚙️ How It Works – *RAG Architecture*  
 
-Retrieval: When a user asks a question, the sentence-transformer model converts it into a numerical vector. This vector is then used to perform a super-fast similarity search against a pre-indexed FAISS database of all 700 Gita shlokas. The top 2-3 most relevant shlokas are retrieved.
+The chatbot follows a **two-step process** to ensure divine yet accurate responses:  
 
-Generation: These retrieved shlokas are then passed as context to a locally-run Language Model (google/flan-t5-base) from Hugging Face. A carefully crafted prompt instructs the model to generate a wise and compassionate answer in the persona of Lord Krishna, strictly based on the provided context.
+1. **Retrieval**  
+   - User query → converted into a vector using a sentence-transformer.  
+   - FAISS index of all 700 shlokas is searched.  
+   - Top **2–3 most relevant verses** are retrieved.  
 
-This RAG approach ensures that the chatbot's answers are always grounded in the actual teachings of the Bhagavad Gita.
+2. **Generation**  
+   - Retrieved shlokas are passed as context to **[google/flan-t5-base](https://huggingface.co/google/flan-t5-base)**.  
+   - A carefully designed prompt makes the model answer as *Lord Krishna*, strictly within the retrieved verses.  
 
-🚀 Getting Started
-Follow these steps to set up and run the project on your local machine.
+✅ This ensures **no hallucinations**, only authentic Gita-based guidance.  
 
-1. Prerequisites
-Python 3.10 or higher
+---
 
-A virtual environment manager like venv
+## 🚀 Getting Started  
 
-2. Clone the Repository
-git clone [https://github.com/gouravdhalwal08/gita_chatbot.git](https://github.com/gouravdhalwal08/gita_chatbot.git)
+Follow these steps to set up and run the project locally:  
+
+### 1. Prerequisites  
+- Python **3.10+**  
+- Virtual environment manager (`venv` recommended)  
+
+---
+
+### 2. Clone the Repository  
+```bash
+git clone https://github.com/gouravdhalwal08/gita_chatbot.git
 cd gita_chatbot
-
 3. Set Up Virtual Environment
+bash
+Copy code
 # Create a virtual environment
-python3 -m venv .venv
+python3 -m venv .venv  
 
 # Activate the virtual environment
-source .venv/bin/activate
-
+source .venv/bin/activate    # Linux / Mac
+.venv\Scripts\activate       # Windows
 4. Install Dependencies
-All required libraries are listed in backend/requirements.txt.
+All dependencies are listed in backend/requirements.txt:
 
+bash
+Copy code
 pip install -r backend/requirements.txt
-
 5. Build the FAISS Vector Index
-Before running the app, you need to process the Gita data and create the vector database. This is a one-time step.
+Before running the app, create the vector database (one-time setup):
 
+bash
+Copy code
 python scripts/build_faiss.py
+This generates:
 
-This will create index.faiss and metadata.json inside the data folder.
+data/index.faiss
 
-6. Run the Streamlit Application
-You're all set! Run the following command to launch the chatbot. The first time you run this, it may take a few minutes to download the AI models from Hugging Face.
+data/metadata.json
 
+6. Run the Application
+Start the chatbot with Streamlit:
+
+bash
+Copy code
 streamlit run app.py
+⚠️ The first run will download models from Hugging Face. Please be patient.
+
+🖼️ Preview
+Here’s what the divine experience looks like:
+
+(Add a screenshot or GIF of your UI here for better presentation)
+
+🙏 Acknowledgements
+Bhagavad Gita – Eternal source of wisdom.
+
+Hugging Face – Local LLMs & transformers.
+
+FAISS – Efficient vector similarity search.
+
+Streamlit – Elegant frontend framework.
+
+✨ “Whenever dharma declines and the purpose of life is forgotten, I manifest myself to protect the good, to destroy evil, and to re-establish dharma.” – Bhagavad Gita (4.7–8)
+
+pgsql
+Copy code
+
+Do you also want me to **add shields.io badges** (Python, Streamlit, Hugging Face, FAISS) at the to
